@@ -8,10 +8,10 @@ on:
   # 手動実行も可能
   workflow_dispatch:
 
-  # mainブランチへのpush時にも実行
+  # masterブランチへのpush時にも実行
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
