@@ -1,0 +1,39 @@
+name: Build and Deploy
+
+on:
+  # 毎日午前3時（UTC）に実行
+  schedule:
+    - cron: "0 3 * * *"
+
+  # 手動実行も可能
+  workflow_dispatch:
+
+  # mainブランチへのpush時にも実行
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Generate site
+        run: python scripts/generate.py
+        env:
+          AMAZON_ASSOCIATE_ID: ${{ secrets.AMAZON_ASSOCIATE_ID }}
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          publish_branch: gh-pages
