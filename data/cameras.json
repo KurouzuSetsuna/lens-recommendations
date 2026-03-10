@@ -1,0 +1,35 @@
+[
+  {
+    "id": "sony-a7iv",
+    "name": "Sony α7 IV",
+    "brand": "Sony",
+    "mount": "Sony E",
+    "sensor": "フルサイズ",
+    "megapixels": 33,
+    "asin": "B09JZT6YK5",
+    "description": "万能フルサイズミラーレス。写真も動画も高性能。",
+    "suitable_for": ["all-around", "video", "professional"]
+  },
+  {
+    "id": "canon-eos-r6-ii",
+    "name": "Canon EOS R6 Mark II",
+    "brand": "Canon",
+    "mount": "Canon RF",
+    "sensor": "フルサイズ",
+    "megapixels": 24,
+    "asin": "B0BHQ7RQ5V",
+    "description": "高速連写と優れたAFを持つキヤノンの最新モデル。",
+    "suitable_for": ["sports", "wildlife", "professional"]
+  },
+  {
+    "id": "nikon-z6-iii",
+    "name": "Nikon Z6 III",
+    "brand": "Nikon",
+    "mount": "Nikon Z",
+    "sensor": "フルサイズ",
+    "megapixels": 24,
+    "asin": "B0D5WFZQRS",
+    "description": "ニコンの最新フルサイズミラーレス。バランスの取れた性能。",
+    "suitable_for": ["all-around", "low-light", "professional"]
+  }
+]

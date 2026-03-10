@@ -1,47 +1,80 @@
 [
   {
+    "id": "sony-fe-50mm-f18",
     "name": "Sony FE 50mm F1.8",
     "brand": "Sony",
     "mount": "Sony E",
+    "focal_length": "50mm",
     "aperture": "F1.8",
     "weight": 186,
-    "amazon_asin": "B01MZ8S0WJ",
-    "description": "軽量で安価な標準単焦点レンズ。コストパフォーマンスに優れ、初心者にもおすすめです。"
+    "asin": "B01MZ8S0WJ",
+    "description": "軽量で安価な標準単焦点レンズ。コストパフォーマンスに優れ、初心者にもおすすめです。",
+    "features": ["軽量186g", "AF対応", "コスパ最高"],
+    "suitable_for": ["street", "portrait", "beginner"]
   },
   {
+    "id": "sigma-50mm-f14-art",
     "name": "Sigma 50mm F1.4 DG DN Art",
     "brand": "Sigma",
     "mount": "Sony E",
+    "focal_length": "50mm",
     "aperture": "F1.4",
     "weight": 670,
-    "amazon_asin": "B08PG87D2C",
-    "description": "高解像度のArtラインレンズ。プロフェッショナルな写真撮影に最適です。"
+    "asin": "B08PG87D2C",
+    "description": "高解像度のArtラインレンズ。プロフェッショナルな写真撮影に最適です。",
+    "features": ["F1.4大口径", "高解像度", "プロ仕様"],
+    "suitable_for": ["portrait", "low-light", "professional"]
   },
   {
+    "id": "canon-rf-50mm-f18",
     "name": "Canon RF 50mm F1.8 STM",
     "brand": "Canon",
     "mount": "Canon RF",
+    "focal_length": "50mm",
     "aperture": "F1.8",
     "weight": 160,
-    "amazon_asin": "B08RDQKSSD",
-    "description": "Canon RFマウント用の軽量単焦点レンズ。静音で高速なAFが魅力です。"
+    "asin": "B08RDQKSSD",
+    "description": "Canon RFマウント用の軽量単焦点レンズ。静音で高速なAFが魅力です。",
+    "features": ["超軽量160g", "静音AF", "高速フォーカス"],
+    "suitable_for": ["street", "portrait", "beginner"]
   },
   {
+    "id": "nikon-z-50mm-f18",
     "name": "Nikon NIKKOR Z 50mm f/1.8 S",
     "brand": "Nikon",
     "mount": "Nikon Z",
+    "focal_length": "50mm",
     "aperture": "F1.8",
     "weight": 415,
-    "amazon_asin": "B07XZ77RMN",
-    "description": "Nikon Zマウント用の標準単焦点レンズ。優れた光学性能を持つSラインレンズです。"
+    "asin": "B07XZ77RMN",
+    "description": "Nikon Zマウント用の標準単焦点レンズ。優れた光学性能を持つSラインレンズです。",
+    "features": ["Sライン", "高画質", "防塵防滴"],
+    "suitable_for": ["portrait", "landscape", "professional"]
   },
   {
-    "name": "TAMRON 35-150mm F/2-2.8 Di III VXD",
-    "brand": "TAMRON",
+    "id": "sony-fe-35mm-f18",
+    "name": "Sony FE 35mm F1.8",
+    "brand": "Sony",
     "mount": "Sony E",
-    "aperture": "F2-2.8",
-    "weight": 1165,
-    "amazon_asin": "B09FZSYWFD",
-    "description": "50mmも含む高性能ズームレンズ。多用途に使える万能レンズです。"
+    "focal_length": "35mm",
+    "aperture": "F1.8",
+    "weight": 280,
+    "asin": "B07MNJKX7F",
+    "description": "広角寄りの画角で使いやすい35mm単焦点レンズ。スナップに最適です。",
+    "features": ["万能画角", "コンパクト", "スナップ向け"],
+    "suitable_for": ["street", "travel", "landscape"]
+  },
+  {
+    "id": "sony-fe-85mm-f18",
+    "name": "Sony FE 85mm F1.8",
+    "brand": "Sony",
+    "mount": "Sony E",
+    "focal_length": "85mm",
+    "aperture": "F1.8",
+    "weight": 371,
+    "asin": "B01DLMD5O6",
+    "description": "中望遠の代表格。ポートレート撮影に最適な焦点距離です。",
+    "features": ["美しいボケ", "ポートレート最適", "高解像度"],
+    "suitable_for": ["portrait", "professional", "beauty"]
   }
 ]

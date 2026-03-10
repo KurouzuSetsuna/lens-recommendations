@@ -1,0 +1,29 @@
+[
+  {
+    "id": "street",
+    "name": "ストリートスナップ",
+    "slug": "street",
+    "description": "街中でのスナップ撮影。日常の一瞬を切り取る写真スタイル。",
+    "recommended_focal_lengths": ["35mm", "50mm"],
+    "recommended_lenses": ["sony-fe-35mm-f18", "sony-fe-50mm-f18", "canon-rf-50mm-f18"],
+    "keywords": ["スナップ", "街", "日常", "スナップ写真"]
+  },
+  {
+    "id": "portrait",
+    "name": "ポートレート撮影",
+    "slug": "portrait",
+    "description": "人物撮影。美しいボケ味と柔らかい描写が特徴。",
+    "recommended_focal_lengths": ["50mm", "85mm"],
+    "recommended_lenses": ["sigma-50mm-f14-art", "sony-fe-85mm-f18", "nikon-z-50mm-f18"],
+    "keywords": ["ポートレート", "人物", "ボケ", "美しい"]
+  },
+  {
+    "id": "landscape",
+    "name": "風景写真",
+    "slug": "landscape",
+    "description": "自然や都市の風景を撮影。広角から標準レンズが活躍。",
+    "recommended_focal_lengths": ["35mm", "50mm"],
+    "recommended_lenses": ["sony-fe-35mm-f18", "nikon-z-50mm-f18"],
+    "keywords": ["風景", "自然", "景色", "広角"]
+  }
+]

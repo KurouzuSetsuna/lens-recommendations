@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Photo Gear Guide - フォト機材ガイド{% endblock %}</title>
+    <meta name="description" content="{% block description %}カメラレンズ、撮影ジャンル別のおすすめ機材を紹介するフォト機材ガイド{% endblock %}">
+    {% block meta %}{% endblock %}
+    <link rel="stylesheet" href="/assets/css/style.css">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="site-title"><a href="/">Photo Gear Guide</a></h1>
+                <nav class="site-nav">
+                    <a href="/" {% if current_page == 'home' %}class="active"{% endif %}>Home</a>
+                    <a href="/lenses/" {% if current_page == 'lenses' %}class="active"{% endif %}>Lenses</a>
+                    <a href="/genres/" {% if current_page == 'genres' %}class="active"{% endif %}>Genres</a>
+                    <a href="/learn/" {% if current_page == 'learn' %}class="active"{% endif %}>Learn</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="site-main">
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="copyright">&copy; 2026 Photo Gear Guide | All rights reserved.</p>
+                <p class="affiliate-notice">
+                    ※当サイトはAmazonアソシエイトプログラムに参加しています。<br>
+                    商品リンクからの購入により、サイト運営費の一部を得ることがあります。
+                </p>
+                <nav class="footer-nav">
+                    <a href="/">ホーム</a>
+                    <a href="/lenses/">レンズ一覧</a>
+                    <a href="/genres/">ジャンル別</a>
+                    <a href="/learn/">学習記事</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

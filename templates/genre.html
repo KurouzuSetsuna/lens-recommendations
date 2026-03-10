@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}{{ genre.name }}におすすめのレンズ | Photo Gear Guide{% endblock %}
+{% block description %}{{ genre.description }}に最適なレンズを厳選紹介。{% endblock %}
+
+{% block content %}
+<article class="genre-detail">
+    <header class="article-header">
+        <h1 class="article-title">{{ genre.name }}</h1>
+        <p class="article-subtitle">{{ genre.description }}</p>
+    </header>
+
+    <section class="genre-content">
+        {{ content|safe }}
+    </section>
+
+    {% if recommended_lenses %}
+    <section class="recommended-lenses">
+        <h2>おすすめレンズ</h2>
+        <div class="lens-grid">
+            {% for lens in recommended_lenses %}
+            <div class="lens-card">
+                <h3><a href="/lenses/{{ lens.id }}/">{{ lens.name }}</a></h3>
+                <p class="lens-card-specs">
+                    <span class="spec-item">{{ lens.focal_length }}</span>
+                    <span class="spec-item">{{ lens.aperture }}</span>
+                    <span class="spec-item">{{ lens.weight }}g</span>
+                </p>
+                <p class="lens-card-desc">{{ lens.description }}</p>
+                <ul class="lens-card-features">
+                    {% for feature in lens.features[:2] %}
+                    <li>{{ feature }}</li>
+                    {% endfor %}
+                </ul>
+                <a href="/lenses/{{ lens.id }}/" class="view-detail-link">詳細を見る</a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
+    {% if related_genres %}
+    <section class="related-genres">
+        <h2>関連ジャンル</h2>
+        <div class="genre-links">
+            {% for related in related_genres %}
+            <a href="/genres/{{ related.slug }}/" class="genre-link">{{ related.name }}</a>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+</article>
+{% endblock %}
