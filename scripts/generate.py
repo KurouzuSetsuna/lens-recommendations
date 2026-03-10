@@ -88,11 +88,12 @@ class SiteGenerator:
         template = self.jinja_env.get_template('index_page.html')
 
         html = template.render(
+            base_path='./',
             current_page='home',
             popular_lenses=self.lenses[:6],  # 人気レンズ6件
             genres=self.genres,
             recent_articles=[
-                {'title': '50mmレンズとは？', 'url': '/learn/what-is-50mm/', 'description': '標準単焦点レンズの魅力を徹底解説'}
+                {'title': '50mmレンズとは？', 'url': 'learn/what-is-50mm/', 'description': '標準単焦点レンズの魅力を徹底解説'}
             ]
         )
 
@@ -121,6 +122,7 @@ class SiteGenerator:
             amazon_url = self.create_amazon_link(lens['asin'])
 
             html = template.render(
+                base_path='../../',
                 current_page='lenses',
                 lens=lens,
                 amazon_url=amazon_url,
@@ -140,6 +142,7 @@ class SiteGenerator:
         template = self.jinja_env.get_template('index_page.html')
 
         html = template.render(
+            base_path='../',
             current_page='lenses',
             popular_lenses=self.lenses,
             genres=[],
@@ -179,6 +182,7 @@ class SiteGenerator:
             related_genres = [g for g in self.genres if g['id'] != genre['id']][:2]
 
             html = template.render(
+                base_path='../../',
                 current_page='genres',
                 genre=genre,
                 content=content_html,
@@ -221,6 +225,7 @@ class SiteGenerator:
             article_dir.mkdir(parents=True, exist_ok=True)
 
             html = template.render(
+                base_path='../../',
                 current_page='learn',
                 title=title,
                 description=description,

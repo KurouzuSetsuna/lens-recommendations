@@ -65,7 +65,7 @@
         <div class="lens-grid">
             {% for related in related_lenses %}
             <div class="lens-card">
-                <h3><a href="/lenses/{{ related.id }}/">{{ related.name }}</a></h3>
+                <h3><a href="{{ base_path }}lenses/{{ related.id }}/">{{ related.name }}</a></h3>
                 <p class="lens-card-info">{{ related.focal_length }} {{ related.aperture }}</p>
                 <p class="lens-card-desc">{{ related.description[:60] }}...</p>
             </div>

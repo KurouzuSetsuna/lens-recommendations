@@ -14,19 +14,19 @@
     <div class="lens-grid">
         {% for lens in popular_lenses %}
         <div class="lens-card">
-            <h3><a href="/lenses/{{ lens.id }}/">{{ lens.name }}</a></h3>
+            <h3><a href="{{ base_path }}lenses/{{ lens.id }}/">{{ lens.name }}</a></h3>
             <p class="lens-card-specs">
                 <span class="spec-item">{{ lens.focal_length }}</span>
                 <span class="spec-item">{{ lens.aperture }}</span>
                 <span class="spec-item">{{ lens.weight }}g</span>
             </p>
             <p class="lens-card-desc">{{ lens.description }}</p>
-            <a href="/lenses/{{ lens.id }}/" class="view-detail-link">詳細を見る</a>
+            <a href="{{ base_path }}lenses/{{ lens.id }}/" class="view-detail-link">詳細を見る</a>
         </div>
         {% endfor %}
     </div>
     <div class="section-footer">
-        <a href="/lenses/" class="view-all-link">すべてのレンズを見る</a>
+        <a href="{{ base_path }}lenses/" class="view-all-link">すべてのレンズを見る</a>
     </div>
 </section>
 
@@ -35,12 +35,12 @@
     <div class="genre-grid">
         {% for genre in genres %}
         <div class="genre-card">
-            <h3><a href="/genres/{{ genre.slug }}/">{{ genre.name }}</a></h3>
+            <h3><a href="{{ base_path }}genres/{{ genre.slug }}/">{{ genre.name }}</a></h3>
             <p class="genre-card-desc">{{ genre.description }}</p>
             <div class="genre-card-lenses">
                 おすすめ焦点距離: {{ genre.recommended_focal_lengths|join(', ') }}
             </div>
-            <a href="/genres/{{ genre.slug }}/" class="view-detail-link">詳細を見る</a>
+            <a href="{{ base_path }}genres/{{ genre.slug }}/" class="view-detail-link">詳細を見る</a>
         </div>
         {% endfor %}
     </div>
@@ -57,7 +57,7 @@
         {% endfor %}
     </div>
     <div class="section-footer">
-        <a href="/learn/" class="view-all-link">すべての学習記事を見る</a>
+        <a href="{{ base_path }}learn/" class="view-all-link">すべての学習記事を見る</a>
     </div>
 </section>
 {% endblock %}

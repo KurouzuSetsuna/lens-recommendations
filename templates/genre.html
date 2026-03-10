@@ -20,7 +20,7 @@
         <div class="lens-grid">
             {% for lens in recommended_lenses %}
             <div class="lens-card">
-                <h3><a href="/lenses/{{ lens.id }}/">{{ lens.name }}</a></h3>
+                <h3><a href="{{ base_path }}lenses/{{ lens.id }}/">{{ lens.name }}</a></h3>
                 <p class="lens-card-specs">
                     <span class="spec-item">{{ lens.focal_length }}</span>
                     <span class="spec-item">{{ lens.aperture }}</span>
@@ -32,7 +32,7 @@
                     <li>{{ feature }}</li>
                     {% endfor %}
                 </ul>
-                <a href="/lenses/{{ lens.id }}/" class="view-detail-link">詳細を見る</a>
+                <a href="{{ base_path }}lenses/{{ lens.id }}/" class="view-detail-link">詳細を見る</a>
             </div>
             {% endfor %}
         </div>
@@ -44,7 +44,7 @@
         <h2>関連ジャンル</h2>
         <div class="genre-links">
             {% for related in related_genres %}
-            <a href="/genres/{{ related.slug }}/" class="genre-link">{{ related.name }}</a>
+            <a href="{{ base_path }}genres/{{ related.slug }}/" class="genre-link">{{ related.name }}</a>
             {% endfor %}
         </div>
     </section>
